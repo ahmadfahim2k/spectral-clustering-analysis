@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.DS_Store
+npm-debug.log*
+
+# Keep results JSON tracked (they are the pipeline outputs the visualiser reads)
+# but ignore large raw dataset downloads:
+data/raw/
+*.zip
+
+# Raw Kaggle US-airports CSV (~509 MB, exceeds GitHub's 100 MB limit).
+# Regenerate the aggregated graph from it — see README. Do NOT commit it.
+data/Airports2.csv
+
+# Editor
+.vscode/

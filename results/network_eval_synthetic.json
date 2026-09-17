@@ -1,0 +1,258 @@
+{
+  "seed": 42,
+  "source": "synthetic",
+  "datasets": {
+    "rings": {
+      "n": 300,
+      "complete_graph": true,
+      "k_true": 2,
+      "table": [
+        {
+          "algorithm": "K-Means (baseline)",
+          "silhouette_unnorm": 0.1606,
+          "davies_bouldin_unnorm": 1.8421,
+          "silhouette_sym": 0.1601,
+          "davies_bouldin_sym": 2.442,
+          "silhouette_shortest_path": 0.2281,
+          "davies_bouldin_shortest_path": 1.4776
+        },
+        {
+          "algorithm": "Unnormalised SC",
+          "silhouette_unnorm": 0.1679,
+          "davies_bouldin_unnorm": 2.22,
+          "silhouette_sym": 0.1295,
+          "davies_bouldin_sym": 3.0404,
+          "silhouette_shortest_path": 0.2175,
+          "davies_bouldin_shortest_path": 1.798
+        },
+        {
+          "algorithm": "Normalised SC \u2014 Shi & Malik (2000)",
+          "silhouette_unnorm": 0.1708,
+          "davies_bouldin_unnorm": 2.1932,
+          "silhouette_sym": 0.1298,
+          "davies_bouldin_sym": 3.0271,
+          "silhouette_shortest_path": 0.218,
+          "davies_bouldin_shortest_path": 1.8007
+        },
+        {
+          "algorithm": "Normalised SC \u2014 Ng, Jordan & Weiss (2001)",
+          "silhouette_unnorm": 0.1708,
+          "davies_bouldin_unnorm": 2.1932,
+          "silhouette_sym": 0.1298,
+          "davies_bouldin_sym": 3.0271,
+          "silhouette_shortest_path": 0.218,
+          "davies_bouldin_shortest_path": 1.8007
+        },
+        {
+          "algorithm": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)",
+          "silhouette_unnorm": 0.1926,
+          "davies_bouldin_unnorm": 30.8381,
+          "silhouette_sym": 0.1585,
+          "davies_bouldin_sym": 2.8797,
+          "silhouette_shortest_path": 0.29,
+          "davies_bouldin_shortest_path": 1.8552
+        }
+      ],
+      "consistency": {
+        "davies_bouldin": {
+          "winners": {
+            "unnorm": "K-Means (baseline)",
+            "sym": "K-Means (baseline)",
+            "shortest_path": "K-Means (baseline)"
+          },
+          "winner_agree": true,
+          "top2_agree": false,
+          "spearman": {
+            "unnorm~sym": 0.3,
+            "unnorm~shortest_path": 0.7,
+            "sym~shortest_path": 0.0
+          },
+          "verdict": "On rings, the davies_bouldin ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (baseline), sym: K-Means (baseline), shortest_path: K-Means (baseline))."
+        },
+        "silhouette": {
+          "winners": {
+            "unnorm": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)",
+            "sym": "K-Means (baseline)",
+            "shortest_path": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)"
+          },
+          "winner_agree": false,
+          "top2_agree": false,
+          "spearman": {
+            "unnorm~sym": -0.09999999999999999,
+            "unnorm~shortest_path": 0.3,
+            "sym~shortest_path": 0.8999999999999998
+          },
+          "verdict": "On rings, the silhouette ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004), sym: K-Means (baseline), shortest_path: Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004))."
+        }
+      }
+    },
+    "moons": {
+      "n": 300,
+      "complete_graph": true,
+      "k_true": 2,
+      "table": [
+        {
+          "algorithm": "K-Means (baseline)",
+          "silhouette_unnorm": 0.3193,
+          "davies_bouldin_unnorm": 1.5866,
+          "silhouette_sym": 0.1502,
+          "davies_bouldin_sym": 2.8115,
+          "silhouette_shortest_path": 0.4959,
+          "davies_bouldin_shortest_path": 0.7415
+        },
+        {
+          "algorithm": "Unnormalised SC",
+          "silhouette_unnorm": 0.3187,
+          "davies_bouldin_unnorm": 1.5867,
+          "silhouette_sym": 0.15,
+          "davies_bouldin_sym": 2.8128,
+          "silhouette_shortest_path": 0.4914,
+          "davies_bouldin_shortest_path": 0.7495
+        },
+        {
+          "algorithm": "Normalised SC \u2014 Shi & Malik (2000)",
+          "silhouette_unnorm": 0.3193,
+          "davies_bouldin_unnorm": 1.5866,
+          "silhouette_sym": 0.1502,
+          "davies_bouldin_sym": 2.8115,
+          "silhouette_shortest_path": 0.4959,
+          "davies_bouldin_shortest_path": 0.7415
+        },
+        {
+          "algorithm": "Normalised SC \u2014 Ng, Jordan & Weiss (2001)",
+          "silhouette_unnorm": 0.3193,
+          "davies_bouldin_unnorm": 1.5866,
+          "silhouette_sym": 0.1502,
+          "davies_bouldin_sym": 2.8115,
+          "silhouette_shortest_path": 0.4959,
+          "davies_bouldin_shortest_path": 0.7415
+        },
+        {
+          "algorithm": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)",
+          "silhouette_unnorm": 0.2578,
+          "davies_bouldin_unnorm": 1.832,
+          "silhouette_sym": 0.1531,
+          "davies_bouldin_sym": 2.7806,
+          "silhouette_shortest_path": 0.6311,
+          "davies_bouldin_shortest_path": 0.562
+        }
+      ],
+      "consistency": {
+        "davies_bouldin": {
+          "winners": {
+            "unnorm": "K-Means (baseline)",
+            "sym": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)",
+            "shortest_path": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)"
+          },
+          "winner_agree": false,
+          "top2_agree": false,
+          "spearman": {
+            "unnorm~sym": -0.09999999999999999,
+            "unnorm~shortest_path": -0.09999999999999999,
+            "sym~shortest_path": 0.9999999999999999
+          },
+          "verdict": "On moons, the davies_bouldin ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (baseline), sym: Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004), shortest_path: Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004))."
+        },
+        "silhouette": {
+          "winners": {
+            "unnorm": "K-Means (baseline)",
+            "sym": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)",
+            "shortest_path": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)"
+          },
+          "winner_agree": false,
+          "top2_agree": false,
+          "spearman": {
+            "unnorm~sym": 0.0,
+            "unnorm~shortest_path": 0.0,
+            "sym~shortest_path": 0.9999999999999999
+          },
+          "verdict": "On moons, the silhouette ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (baseline), sym: Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004), shortest_path: Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004))."
+        }
+      }
+    },
+    "blobs": {
+      "n": 300,
+      "complete_graph": true,
+      "k_true": 3,
+      "table": [
+        {
+          "algorithm": "K-Means (baseline)",
+          "silhouette_unnorm": 0.6368,
+          "davies_bouldin_unnorm": 0.8929,
+          "silhouette_sym": 0.2898,
+          "davies_bouldin_sym": 1.6203,
+          "silhouette_shortest_path": 0.9951,
+          "davies_bouldin_shortest_path": 0.0066
+        },
+        {
+          "algorithm": "Unnormalised SC",
+          "silhouette_unnorm": 0.5054,
+          "davies_bouldin_unnorm": 0.9518,
+          "silhouette_sym": 0.1073,
+          "davies_bouldin_sym": 1.4569,
+          "silhouette_shortest_path": 0.6744,
+          "davies_bouldin_shortest_path": 0.3098
+        },
+        {
+          "algorithm": "Normalised SC \u2014 Shi & Malik (2000)",
+          "silhouette_unnorm": 0.6368,
+          "davies_bouldin_unnorm": 0.8929,
+          "silhouette_sym": 0.2898,
+          "davies_bouldin_sym": 1.6203,
+          "silhouette_shortest_path": 0.9951,
+          "davies_bouldin_shortest_path": 0.0066
+        },
+        {
+          "algorithm": "Normalised SC \u2014 Ng, Jordan & Weiss (2001)",
+          "silhouette_unnorm": 0.6368,
+          "davies_bouldin_unnorm": 0.8929,
+          "silhouette_sym": 0.2898,
+          "davies_bouldin_sym": 1.6203,
+          "silhouette_shortest_path": 0.9951,
+          "davies_bouldin_shortest_path": 0.0066
+        },
+        {
+          "algorithm": "Self-Tuning SC \u2014 Zelnik-Manor & Perona (2004)",
+          "silhouette_unnorm": 0.6368,
+          "davies_bouldin_unnorm": 0.8929,
+          "silhouette_sym": 0.2898,
+          "davies_bouldin_sym": 1.6203,
+          "silhouette_shortest_path": 0.9951,
+          "davies_bouldin_shortest_path": 0.0066
+        }
+      ],
+      "consistency": {
+        "davies_bouldin": {
+          "winners": {
+            "unnorm": "K-Means (baseline)",
+            "sym": "Unnormalised SC",
+            "shortest_path": "K-Means (baseline)"
+          },
+          "winner_agree": false,
+          "top2_agree": false,
+          "spearman": {
+            "unnorm~sym": 0.0,
+            "unnorm~shortest_path": 0.9999999999999999,
+            "sym~shortest_path": 0.0
+          },
+          "verdict": "On blobs, the davies_bouldin ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (baseline), sym: Unnormalised SC, shortest_path: K-Means (baseline))."
+        },
+        "silhouette": {
+          "winners": {
+            "unnorm": "K-Means (baseline)",
+            "sym": "K-Means (baseline)",
+            "shortest_path": "K-Means (baseline)"
+          },
+          "winner_agree": true,
+          "top2_agree": true,
+          "spearman": {
+            "unnorm~sym": 0.9999999999999999,
+            "unnorm~shortest_path": 0.9999999999999999,
+            "sym~shortest_path": 0.9999999999999999
+          },
+          "verdict": "On blobs, the silhouette ranking is stable across all three embeddings \u2014 K-Means (baseline) ranks first and the top-2 set is identical."
+        }
+      }
+    }
+  }
+}

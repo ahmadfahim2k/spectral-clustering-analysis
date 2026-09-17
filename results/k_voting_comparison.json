@@ -1,0 +1,206 @@
+{
+  "seed": 42,
+  "k_min": 2,
+  "k_max": 8,
+  "records": [
+    {
+      "dataset": "synthetic_rings",
+      "kind": "synthetic",
+      "proposals": {
+        "Unnormalised SC": 3,
+        "Shi-Malik SC": 3,
+        "Ng-Jordan-Weiss SC": 3,
+        "Self-Tuning SC": 6,
+        "K-Means": 3
+      },
+      "voteCounts": {
+        "3": 4,
+        "6": 1
+      },
+      "tieBroken": false,
+      "k_voted": 3,
+      "k_single_reference": 2,
+      "differs": true,
+      "timings": {
+        "graph_build_s": 0.007,
+        "single_reference_k_selection_s": 0.08,
+        "voting_s": 0.052,
+        "single_reference_total_s": 0.087,
+        "voting_total_s": 0.058
+      },
+      "quality_single_k": {
+        "K-Means": -0.003,
+        "Unnormalised SC": -0.003,
+        "Shi-Malik SC": -0.003,
+        "Ng-Jordan-Weiss SC": -0.003,
+        "Self-Tuning SC": 1.0
+      },
+      "quality_voted_k": {
+        "K-Means": -0.004,
+        "Unnormalised SC": -0.003,
+        "Shi-Malik SC": -0.004,
+        "Ng-Jordan-Weiss SC": -0.004,
+        "Self-Tuning SC": 0.749
+      }
+    },
+    {
+      "dataset": "synthetic_moons",
+      "kind": "synthetic",
+      "proposals": {
+        "Unnormalised SC": 2,
+        "Shi-Malik SC": 2,
+        "Ng-Jordan-Weiss SC": 2,
+        "Self-Tuning SC": 8,
+        "K-Means": 2
+      },
+      "voteCounts": {
+        "2": 4,
+        "8": 1
+      },
+      "tieBroken": false,
+      "k_voted": 2,
+      "k_single_reference": 2,
+      "differs": false,
+      "timings": {
+        "graph_build_s": 0.002,
+        "single_reference_k_selection_s": 0.04,
+        "voting_s": 0.052,
+        "single_reference_total_s": 0.042,
+        "voting_total_s": 0.054
+      }
+    },
+    {
+      "dataset": "synthetic_blobs",
+      "kind": "synthetic",
+      "proposals": {
+        "Unnormalised SC": 2,
+        "Shi-Malik SC": 2,
+        "Ng-Jordan-Weiss SC": 2,
+        "Self-Tuning SC": 3,
+        "K-Means": 3
+      },
+      "voteCounts": {
+        "2": 3,
+        "3": 2
+      },
+      "tieBroken": false,
+      "k_voted": 2,
+      "k_single_reference": 3,
+      "differs": true,
+      "timings": {
+        "graph_build_s": 0.001,
+        "single_reference_k_selection_s": 0.045,
+        "voting_s": 0.048,
+        "single_reference_total_s": 0.046,
+        "voting_total_s": 0.049
+      },
+      "quality_single_k": {
+        "K-Means": 1.0,
+        "Unnormalised SC": 0.565,
+        "Shi-Malik SC": 1.0,
+        "Ng-Jordan-Weiss SC": 1.0,
+        "Self-Tuning SC": 1.0
+      },
+      "quality_voted_k": {
+        "K-Means": 0.57,
+        "Unnormalised SC": 0.57,
+        "Shi-Malik SC": 0.57,
+        "Ng-Jordan-Weiss SC": 0.57,
+        "Self-Tuning SC": 0.57
+      }
+    },
+    {
+      "dataset": "airports",
+      "kind": "network",
+      "proposals": {
+        "Unnormalised SC": 2,
+        "Shi-Malik SC": 2,
+        "Ng-Jordan-Weiss SC": 2,
+        "Self-Tuning SC": 8,
+        "K-Means": 4
+      },
+      "voteCounts": {
+        "2": 3,
+        "8": 1,
+        "4": 1
+      },
+      "tieBroken": false,
+      "k_voted": 2,
+      "k_single_reference": 2,
+      "differs": false,
+      "timings": {
+        "graph_build_s": 0.424,
+        "single_reference_k_selection_s": 0.131,
+        "voting_s": 0.133,
+        "single_reference_total_s": 0.555,
+        "voting_total_s": 0.557
+      }
+    },
+    {
+      "dataset": "yeast",
+      "kind": "network",
+      "proposals": {
+        "Unnormalised SC": 2,
+        "Shi-Malik SC": 2,
+        "Ng-Jordan-Weiss SC": 2,
+        "Self-Tuning SC": 2,
+        "K-Means": 5
+      },
+      "voteCounts": {
+        "2": 4,
+        "5": 1
+      },
+      "tieBroken": false,
+      "k_voted": 2,
+      "k_single_reference": 3,
+      "differs": true,
+      "timings": {
+        "graph_build_s": 0.592,
+        "single_reference_k_selection_s": 0.54,
+        "voting_s": 0.417,
+        "single_reference_total_s": 1.132,
+        "voting_total_s": 1.01
+      },
+      "quality_single_k": {
+        "K-Means": 0.023,
+        "Unnormalised SC": 0.025,
+        "Shi-Malik SC": 0.024,
+        "Ng-Jordan-Weiss SC": 0.242,
+        "Self-Tuning SC": -0.002
+      },
+      "quality_voted_k": {
+        "K-Means": 0.007,
+        "Unnormalised SC": 0.017,
+        "Shi-Malik SC": 0.017,
+        "Ng-Jordan-Weiss SC": 0.051,
+        "Self-Tuning SC": -0.0
+      }
+    },
+    {
+      "dataset": "facebook",
+      "kind": "network",
+      "proposals": {
+        "Unnormalised SC": 7,
+        "Shi-Malik SC": 7,
+        "Ng-Jordan-Weiss SC": 7,
+        "Self-Tuning SC": 6,
+        "K-Means": 7
+      },
+      "voteCounts": {
+        "7": 4,
+        "6": 1
+      },
+      "tieBroken": false,
+      "k_voted": 7,
+      "k_single_reference": 7,
+      "differs": false,
+      "timings": {
+        "graph_build_s": 14.347,
+        "single_reference_k_selection_s": 13.768,
+        "voting_s": 10.433,
+        "single_reference_total_s": 28.114,
+        "voting_total_s": 24.78
+      }
+    }
+  ]
+}

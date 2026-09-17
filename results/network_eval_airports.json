@@ -1,0 +1,90 @@
+{
+  "n": 727,
+  "m": 22955,
+  "k": 2,
+  "candidates": [
+    2,
+    6,
+    5
+  ],
+  "table": [
+    {
+      "algorithm": "K-Means (embedding)",
+      "silhouette_unnorm": 0.9667,
+      "davies_bouldin_unnorm": 0.0187,
+      "silhouette_sym": -0.7267,
+      "davies_bouldin_sym": 6.269,
+      "silhouette_shortest_path": 0.2712,
+      "davies_bouldin_shortest_path": 0.5644
+    },
+    {
+      "algorithm": "Unnormalised SC",
+      "silhouette_unnorm": 0.9667,
+      "davies_bouldin_unnorm": 0.0187,
+      "silhouette_sym": -0.7267,
+      "davies_bouldin_sym": 6.269,
+      "silhouette_shortest_path": 0.2712,
+      "davies_bouldin_shortest_path": 0.5644
+    },
+    {
+      "algorithm": "Shi-Malik SC",
+      "silhouette_unnorm": 0.1511,
+      "davies_bouldin_unnorm": 4.02,
+      "silhouette_sym": 0.4209,
+      "davies_bouldin_sym": 2.5147,
+      "silhouette_shortest_path": 0.1788,
+      "davies_bouldin_shortest_path": 2.3177
+    },
+    {
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "silhouette_unnorm": -0.0392,
+      "davies_bouldin_unnorm": 4.359,
+      "silhouette_sym": 0.3133,
+      "davies_bouldin_sym": 2.4671,
+      "silhouette_shortest_path": 0.167,
+      "davies_bouldin_shortest_path": 2.402
+    },
+    {
+      "algorithm": "Self-Tuning SC (embedding)",
+      "silhouette_unnorm": 0.8171,
+      "davies_bouldin_unnorm": 0.2341,
+      "silhouette_sym": -0.6596,
+      "davies_bouldin_sym": 6.2828,
+      "silhouette_shortest_path": 0.0549,
+      "davies_bouldin_shortest_path": 3.6232
+    }
+  ],
+  "consistency": {
+    "silhouette": {
+      "winners": {
+        "unnorm": "K-Means (embedding)",
+        "sym": "Shi-Malik SC",
+        "shortest_path": "K-Means (embedding)"
+      },
+      "winner_agree": false,
+      "top2_agree": false,
+      "spearman": {
+        "unnorm~sym": -0.7999999999999999,
+        "unnorm~shortest_path": 0.7,
+        "sym~shortest_path": -0.49999999999999994
+      },
+      "verdict": "On airports, the silhouette ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (embedding), sym: Shi-Malik SC, shortest_path: K-Means (embedding))."
+    },
+    "davies_bouldin": {
+      "winners": {
+        "unnorm": "K-Means (embedding)",
+        "sym": "Ng-Jordan-Weiss SC",
+        "shortest_path": "K-Means (embedding)"
+      },
+      "winner_agree": false,
+      "top2_agree": false,
+      "spearman": {
+        "unnorm~sym": -0.7,
+        "unnorm~shortest_path": 0.7,
+        "sym~shortest_path": 0.0
+      },
+      "verdict": "On airports, the davies_bouldin ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (embedding), sym: Ng-Jordan-Weiss SC, shortest_path: K-Means (embedding))."
+    }
+  },
+  "shortest_path_seconds": 0.225
+}

@@ -1,0 +1,11 @@
+# COMP702 Dissertation — Spectral Clustering Benchmark
+# Python analysis pipeline dependencies (tested on Python 3.10)
+
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.3
+matplotlib>=3.7
+pandas>=2.0
+networkx>=3.1          # network datasets (airports / yeast PPI / facebook)
+jupyter>=1.0           # provides nbformat/nbconvert used to run the notebooks
+notebook>=7.0

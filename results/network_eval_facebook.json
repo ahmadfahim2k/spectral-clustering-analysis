@@ -1,0 +1,90 @@
+{
+  "n": 4039,
+  "m": 88234,
+  "k": 7,
+  "candidates": [
+    7,
+    8,
+    4
+  ],
+  "shortest_path_seconds": 4.793,
+  "table": [
+    {
+      "algorithm": "K-Means (embedding)",
+      "silhouette_unnorm": 0.7432,
+      "davies_bouldin_unnorm": 0.5258,
+      "silhouette_sym": 0.3605,
+      "davies_bouldin_sym": 1.1632,
+      "silhouette_shortest_path": 0.7001,
+      "davies_bouldin_shortest_path": 0.4927
+    },
+    {
+      "algorithm": "Unnormalised SC",
+      "silhouette_unnorm": 0.7514,
+      "davies_bouldin_unnorm": 0.6536,
+      "silhouette_sym": 0.3639,
+      "davies_bouldin_sym": 1.1639,
+      "silhouette_shortest_path": 0.7112,
+      "davies_bouldin_shortest_path": 0.4789
+    },
+    {
+      "algorithm": "Shi-Malik SC",
+      "silhouette_unnorm": 0.7514,
+      "davies_bouldin_unnorm": 0.6536,
+      "silhouette_sym": 0.3639,
+      "davies_bouldin_sym": 1.1639,
+      "silhouette_shortest_path": 0.7112,
+      "davies_bouldin_shortest_path": 0.4789
+    },
+    {
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "silhouette_unnorm": 0.7505,
+      "davies_bouldin_unnorm": 0.6714,
+      "silhouette_sym": 0.3641,
+      "davies_bouldin_sym": 1.1684,
+      "silhouette_shortest_path": 0.7111,
+      "davies_bouldin_shortest_path": 0.4843
+    },
+    {
+      "algorithm": "Self-Tuning SC (embedding)",
+      "silhouette_unnorm": 0.0118,
+      "davies_bouldin_unnorm": 0.7813,
+      "silhouette_sym": -0.3694,
+      "davies_bouldin_sym": 3.3947,
+      "silhouette_shortest_path": -0.1107,
+      "davies_bouldin_shortest_path": 1.0304
+    }
+  ],
+  "consistency": {
+    "silhouette": {
+      "winners": {
+        "unnorm": "Unnormalised SC",
+        "sym": "Ng-Jordan-Weiss SC",
+        "shortest_path": "Unnormalised SC"
+      },
+      "winner_agree": false,
+      "top2_agree": false,
+      "spearman": {
+        "unnorm~sym": 0.6,
+        "unnorm~shortest_path": 0.9999999999999999,
+        "sym~shortest_path": 0.6
+      },
+      "verdict": "On facebook, the silhouette ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: Unnormalised SC, sym: Ng-Jordan-Weiss SC, shortest_path: Unnormalised SC)."
+    },
+    "davies_bouldin": {
+      "winners": {
+        "unnorm": "K-Means (embedding)",
+        "sym": "K-Means (embedding)",
+        "shortest_path": "Unnormalised SC"
+      },
+      "winner_agree": false,
+      "top2_agree": false,
+      "spearman": {
+        "unnorm~sym": 0.9999999999999999,
+        "unnorm~shortest_path": 0.39999999999999997,
+        "sym~shortest_path": 0.39999999999999997
+      },
+      "verdict": "On facebook, the davies_bouldin ranking is embedding-dependent \u2014 the top algorithm changes with the embedding (unnorm: K-Means (embedding), sym: K-Means (embedding), shortest_path: Unnormalised SC)."
+    }
+  }
+}

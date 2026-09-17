@@ -1,0 +1,754 @@
+{
+  "datasets": [
+    {
+      "id": "synthetic_rings",
+      "label": "Synthetic \u2014 Rings",
+      "n": 300,
+      "type": "scatter",
+      "group": "synthetic",
+      "hasGroundTruth": true,
+      "k_true": 2
+    },
+    {
+      "id": "synthetic_moons",
+      "label": "Synthetic \u2014 Moons",
+      "n": 300,
+      "type": "scatter",
+      "group": "synthetic",
+      "hasGroundTruth": true,
+      "k_true": 2
+    },
+    {
+      "id": "synthetic_blobs",
+      "label": "Synthetic \u2014 Blobs",
+      "n": 300,
+      "type": "scatter",
+      "group": "synthetic",
+      "hasGroundTruth": true,
+      "k_true": 3
+    },
+    {
+      "id": "airports",
+      "label": "US Airports",
+      "n": 727,
+      "type": "network",
+      "group": "network",
+      "hasGroundTruth": false,
+      "k": 2,
+      "edges": 22955,
+      "note": "Weighted by flight counts. One airport (TVI) is an isolated pendant leaf that causes degenerate splits under unnormalised methods."
+    },
+    {
+      "id": "yeast",
+      "label": "Yeast PPI",
+      "n": 1458,
+      "type": "network",
+      "group": "network",
+      "hasGroundTruth": false,
+      "k": 3,
+      "edges": 1948,
+      "note": "50% of proteins are degree-1; unnormalised methods fragment."
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook Social Circles",
+      "n": 4039,
+      "type": "network",
+      "group": "network",
+      "hasGroundTruth": false,
+      "k": 7,
+      "edges": 88234,
+      "note": "Unweighted friendships; lowest leaf fraction (1.9%) \u2014 unnormalised methods succeed here."
+    }
+  ],
+  "algorithms": [
+    "K-Means",
+    "Unnormalised SC",
+    "Shi-Malik SC",
+    "Ng-Jordan-Weiss SC",
+    "Self-Tuning SC"
+  ],
+  "results": [
+    {
+      "dataset": "synthetic_rings",
+      "algorithm": "K-Means",
+      "k": 3,
+      "metrics": {
+        "ARI": -0.004341303887240768,
+        "NMI": 0.00010861959644204679,
+        "silhouette_unnorm": 0.1606,
+        "silhouette_sym": 0.1601,
+        "silhouette_shortest_path": 0.2281,
+        "davies_bouldin_unnorm": 1.8421,
+        "davies_bouldin_sym": 2.442,
+        "davies_bouldin_shortest_path": 1.4776,
+        "modularity": 0.1174,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        106,
+        97,
+        97
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_rings",
+      "algorithm": "Unnormalised SC",
+      "k": 2,
+      "metrics": {
+        "ARI": -0.0031623689430433552,
+        "NMI": 0.00012902293619375515,
+        "silhouette_unnorm": 0.1679,
+        "silhouette_sym": 0.1295,
+        "silhouette_shortest_path": 0.2175,
+        "davies_bouldin_unnorm": 2.22,
+        "davies_bouldin_sym": 3.0404,
+        "davies_bouldin_shortest_path": 1.798,
+        "modularity": 0.099,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        160,
+        140
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_rings",
+      "algorithm": "Shi-Malik SC",
+      "k": 2,
+      "metrics": {
+        "ARI": -0.00335331041715635,
+        "NMI": 0.0,
+        "silhouette_unnorm": 0.1708,
+        "silhouette_sym": 0.1298,
+        "silhouette_shortest_path": 0.218,
+        "davies_bouldin_unnorm": 2.1932,
+        "davies_bouldin_sym": 3.0271,
+        "davies_bouldin_shortest_path": 1.8007,
+        "modularity": 0.1006,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        154,
+        146
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_rings",
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "k": 2,
+      "metrics": {
+        "ARI": -0.00335331041715635,
+        "NMI": 0.0,
+        "silhouette_unnorm": 0.1708,
+        "silhouette_sym": 0.1298,
+        "silhouette_shortest_path": 0.218,
+        "davies_bouldin_unnorm": 2.1932,
+        "davies_bouldin_sym": 3.0271,
+        "davies_bouldin_shortest_path": 1.8007,
+        "modularity": 0.1006,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        154,
+        146
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_rings",
+      "algorithm": "Self-Tuning SC",
+      "k": 2,
+      "metrics": {
+        "ARI": 1.0,
+        "NMI": 1.0,
+        "silhouette_unnorm": 0.1926,
+        "silhouette_sym": 0.1585,
+        "silhouette_shortest_path": 0.29,
+        "davies_bouldin_unnorm": 30.8381,
+        "davies_bouldin_sym": 2.8797,
+        "davies_bouldin_shortest_path": 1.8552,
+        "modularity": 0.0134,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        150,
+        150
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_moons",
+      "algorithm": "K-Means",
+      "k": 2,
+      "metrics": {
+        "ARI": 0.47896853094705444,
+        "NMI": 0.38188051089996183,
+        "silhouette_unnorm": 0.3193,
+        "silhouette_sym": 0.1502,
+        "silhouette_shortest_path": 0.4959,
+        "davies_bouldin_unnorm": 1.5866,
+        "davies_bouldin_sym": 2.8115,
+        "davies_bouldin_shortest_path": 0.7415,
+        "modularity": 0.1559,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        150,
+        150
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_moons",
+      "algorithm": "Unnormalised SC",
+      "k": 2,
+      "metrics": {
+        "ARI": 0.46973773754843584,
+        "NMI": 0.3737594093895332,
+        "silhouette_unnorm": 0.3187,
+        "silhouette_sym": 0.15,
+        "silhouette_shortest_path": 0.4914,
+        "davies_bouldin_unnorm": 1.5867,
+        "davies_bouldin_sym": 2.8128,
+        "davies_bouldin_shortest_path": 0.7495,
+        "modularity": 0.1558,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        151,
+        149
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_moons",
+      "algorithm": "Shi-Malik SC",
+      "k": 2,
+      "metrics": {
+        "ARI": 0.47896853094705444,
+        "NMI": 0.38188051089996183,
+        "silhouette_unnorm": 0.3193,
+        "silhouette_sym": 0.1502,
+        "silhouette_shortest_path": 0.4959,
+        "davies_bouldin_unnorm": 1.5866,
+        "davies_bouldin_sym": 2.8115,
+        "davies_bouldin_shortest_path": 0.7415,
+        "modularity": 0.1559,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        150,
+        150
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_moons",
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "k": 2,
+      "metrics": {
+        "ARI": 0.47896853094705444,
+        "NMI": 0.38188051089996183,
+        "silhouette_unnorm": 0.3193,
+        "silhouette_sym": 0.1502,
+        "silhouette_shortest_path": 0.4959,
+        "davies_bouldin_unnorm": 1.5866,
+        "davies_bouldin_sym": 2.8115,
+        "davies_bouldin_shortest_path": 0.7415,
+        "modularity": 0.1559,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        150,
+        150
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_moons",
+      "algorithm": "Self-Tuning SC",
+      "k": 2,
+      "metrics": {
+        "ARI": 1.0,
+        "NMI": 1.0,
+        "silhouette_unnorm": 0.2578,
+        "silhouette_sym": 0.1531,
+        "silhouette_shortest_path": 0.6311,
+        "davies_bouldin_unnorm": 1.832,
+        "davies_bouldin_sym": 2.7806,
+        "davies_bouldin_shortest_path": 0.562,
+        "modularity": 0.1166,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        150,
+        150
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_blobs",
+      "algorithm": "K-Means",
+      "k": 3,
+      "metrics": {
+        "ARI": 1.0,
+        "NMI": 1.0,
+        "silhouette_unnorm": 0.6368,
+        "silhouette_sym": 0.2898,
+        "silhouette_shortest_path": 0.9951,
+        "davies_bouldin_unnorm": 0.8929,
+        "davies_bouldin_sym": 1.6203,
+        "davies_bouldin_shortest_path": 0.0066,
+        "modularity": 0.1738,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        100,
+        100,
+        100
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_blobs",
+      "algorithm": "Unnormalised SC",
+      "k": 3,
+      "metrics": {
+        "ARI": 0.5648990540491277,
+        "NMI": 0.7258712263091794,
+        "silhouette_unnorm": 0.5054,
+        "silhouette_sym": 0.1073,
+        "silhouette_shortest_path": 0.6744,
+        "davies_bouldin_unnorm": 0.9518,
+        "davies_bouldin_sym": 1.4569,
+        "davies_bouldin_shortest_path": 0.3098,
+        "modularity": 0.1507,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        200,
+        99,
+        1
+      ],
+      "flag": "degenerate \u2014 isolates a single node"
+    },
+    {
+      "dataset": "synthetic_blobs",
+      "algorithm": "Shi-Malik SC",
+      "k": 3,
+      "metrics": {
+        "ARI": 1.0,
+        "NMI": 1.0,
+        "silhouette_unnorm": 0.6368,
+        "silhouette_sym": 0.2898,
+        "silhouette_shortest_path": 0.9951,
+        "davies_bouldin_unnorm": 0.8929,
+        "davies_bouldin_sym": 1.6203,
+        "davies_bouldin_shortest_path": 0.0066,
+        "modularity": 0.1738,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        100,
+        100,
+        100
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_blobs",
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "k": 3,
+      "metrics": {
+        "ARI": 1.0,
+        "NMI": 1.0,
+        "silhouette_unnorm": 0.6368,
+        "silhouette_sym": 0.2898,
+        "silhouette_shortest_path": 0.9951,
+        "davies_bouldin_unnorm": 0.8929,
+        "davies_bouldin_sym": 1.6203,
+        "davies_bouldin_shortest_path": 0.0066,
+        "modularity": 0.1738,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        100,
+        100,
+        100
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "synthetic_blobs",
+      "algorithm": "Self-Tuning SC",
+      "k": 3,
+      "metrics": {
+        "ARI": 1.0,
+        "NMI": 1.0,
+        "silhouette_unnorm": 0.6368,
+        "silhouette_sym": 0.2898,
+        "silhouette_shortest_path": 0.9951,
+        "davies_bouldin_unnorm": 0.8929,
+        "davies_bouldin_sym": 1.6203,
+        "davies_bouldin_shortest_path": 0.0066,
+        "modularity": 0.1738,
+        "modularityNote": "proximity graph \u2014 measures compactness"
+      },
+      "clusterSizes": [
+        100,
+        100,
+        100
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "airports",
+      "algorithm": "K-Means",
+      "k": 2,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.9667,
+        "silhouette_sym": -0.7267,
+        "silhouette_shortest_path": 0.2712,
+        "davies_bouldin_unnorm": 0.0187,
+        "davies_bouldin_sym": 6.269,
+        "davies_bouldin_shortest_path": 0.5644,
+        "modularity": -0.0
+      },
+      "clusterSizes": [
+        726,
+        1
+      ],
+      "flag": "degenerate \u2014 isolates a single low-degree node (TVI, a pendant leaf)"
+    },
+    {
+      "dataset": "airports",
+      "algorithm": "Unnormalised SC",
+      "k": 2,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.9667,
+        "silhouette_sym": -0.7267,
+        "silhouette_shortest_path": 0.2712,
+        "davies_bouldin_unnorm": 0.0187,
+        "davies_bouldin_sym": 6.269,
+        "davies_bouldin_shortest_path": 0.5644,
+        "modularity": -0.0
+      },
+      "clusterSizes": [
+        726,
+        1
+      ],
+      "flag": "degenerate \u2014 isolates a single low-degree node (TVI, a pendant leaf)"
+    },
+    {
+      "dataset": "airports",
+      "algorithm": "Shi-Malik SC",
+      "k": 2,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.1511,
+        "silhouette_sym": 0.4209,
+        "silhouette_shortest_path": 0.1788,
+        "davies_bouldin_unnorm": 4.02,
+        "davies_bouldin_sym": 2.5147,
+        "davies_bouldin_shortest_path": 2.3177,
+        "modularity": 0.1361
+      },
+      "clusterSizes": [
+        589,
+        138
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "airports",
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "k": 2,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": -0.0392,
+        "silhouette_sym": 0.3133,
+        "silhouette_shortest_path": 0.167,
+        "davies_bouldin_unnorm": 4.359,
+        "davies_bouldin_sym": 2.4671,
+        "davies_bouldin_shortest_path": 2.402,
+        "modularity": 0.2231
+      },
+      "clusterSizes": [
+        539,
+        188
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "airports",
+      "algorithm": "Self-Tuning SC",
+      "k": 2,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.8171,
+        "silhouette_sym": -0.6596,
+        "silhouette_shortest_path": 0.0549,
+        "davies_bouldin_unnorm": 0.2341,
+        "davies_bouldin_sym": 6.2828,
+        "davies_bouldin_shortest_path": 3.6232,
+        "modularity": -0.0
+      },
+      "clusterSizes": [
+        701,
+        26
+      ],
+      "flag": "near-degenerate \u2014 one dominant cluster with small fragments"
+    },
+    {
+      "dataset": "yeast",
+      "algorithm": "K-Means",
+      "k": 3,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.751,
+        "silhouette_sym": 0.7413,
+        "silhouette_shortest_path": 0.2619,
+        "davies_bouldin_unnorm": 0.316,
+        "davies_bouldin_sym": 0.4798,
+        "davies_bouldin_shortest_path": 0.7166,
+        "modularity": 0.0234
+      },
+      "clusterSizes": [
+        1434,
+        16,
+        8
+      ],
+      "flag": "near-degenerate \u2014 one giant cluster plus tiny low-degree fragments"
+    },
+    {
+      "dataset": "yeast",
+      "algorithm": "Unnormalised SC",
+      "k": 3,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.7519,
+        "silhouette_sym": 0.744,
+        "silhouette_shortest_path": 0.3212,
+        "davies_bouldin_unnorm": 0.3594,
+        "davies_bouldin_sym": 0.5037,
+        "davies_bouldin_shortest_path": 0.6263,
+        "modularity": 0.0254
+      },
+      "clusterSizes": [
+        1435,
+        15,
+        8
+      ],
+      "flag": "near-degenerate \u2014 one giant cluster plus tiny low-degree fragments"
+    },
+    {
+      "dataset": "yeast",
+      "algorithm": "Shi-Malik SC",
+      "k": 3,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.7588,
+        "silhouette_sym": 0.752,
+        "silhouette_shortest_path": 0.3223,
+        "davies_bouldin_unnorm": 0.3294,
+        "davies_bouldin_sym": 0.478,
+        "davies_bouldin_shortest_path": 0.615,
+        "modularity": 0.0244
+      },
+      "clusterSizes": [
+        1436,
+        14,
+        8
+      ],
+      "flag": "near-degenerate \u2014 one giant cluster plus tiny low-degree fragments"
+    },
+    {
+      "dataset": "yeast",
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "k": 3,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.6153,
+        "silhouette_sym": 0.5877,
+        "silhouette_shortest_path": 0.1901,
+        "davies_bouldin_unnorm": 2.1111,
+        "davies_bouldin_sym": 2.1596,
+        "davies_bouldin_shortest_path": 2.3939,
+        "modularity": 0.2423
+      },
+      "clusterSizes": [
+        1202,
+        192,
+        64
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "yeast",
+      "algorithm": "Self-Tuning SC",
+      "k": 3,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": -0.4415,
+        "silhouette_sym": -0.4361,
+        "silhouette_shortest_path": -0.0649,
+        "davies_bouldin_unnorm": 3.6646,
+        "davies_bouldin_sym": 4.6737,
+        "davies_bouldin_shortest_path": 3.6672,
+        "modularity": -0.0016
+      },
+      "clusterSizes": [
+        1330,
+        66,
+        62
+      ],
+      "flag": "near-degenerate \u2014 one giant cluster plus tiny low-degree fragments"
+    },
+    {
+      "dataset": "facebook",
+      "algorithm": "K-Means",
+      "k": 7,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.7432,
+        "silhouette_sym": 0.3605,
+        "silhouette_shortest_path": 0.7001,
+        "davies_bouldin_unnorm": 0.5258,
+        "davies_bouldin_sym": 1.1632,
+        "davies_bouldin_shortest_path": 0.4927,
+        "modularity": 0.7072
+      },
+      "clusterSizes": [
+        1368,
+        786,
+        753,
+        548,
+        341,
+        184,
+        59
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "facebook",
+      "algorithm": "Unnormalised SC",
+      "k": 7,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.7514,
+        "silhouette_sym": 0.3639,
+        "silhouette_shortest_path": 0.7112,
+        "davies_bouldin_unnorm": 0.6536,
+        "davies_bouldin_sym": 1.1639,
+        "davies_bouldin_shortest_path": 0.4789,
+        "modularity": 0.7079
+      },
+      "clusterSizes": [
+        1348,
+        786,
+        752,
+        548,
+        341,
+        205,
+        59
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "facebook",
+      "algorithm": "Shi-Malik SC",
+      "k": 7,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.7514,
+        "silhouette_sym": 0.3639,
+        "silhouette_shortest_path": 0.7112,
+        "davies_bouldin_unnorm": 0.6536,
+        "davies_bouldin_sym": 1.1639,
+        "davies_bouldin_shortest_path": 0.4789,
+        "modularity": 0.7079
+      },
+      "clusterSizes": [
+        1348,
+        786,
+        752,
+        548,
+        341,
+        205,
+        59
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "facebook",
+      "algorithm": "Ng-Jordan-Weiss SC",
+      "k": 7,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.7505,
+        "silhouette_sym": 0.3641,
+        "silhouette_shortest_path": 0.7111,
+        "davies_bouldin_unnorm": 0.6714,
+        "davies_bouldin_sym": 1.1684,
+        "davies_bouldin_shortest_path": 0.4843,
+        "modularity": 0.708
+      },
+      "clusterSizes": [
+        1342,
+        785,
+        752,
+        546,
+        345,
+        208,
+        61
+      ],
+      "flag": null
+    },
+    {
+      "dataset": "facebook",
+      "algorithm": "Self-Tuning SC",
+      "k": 7,
+      "metrics": {
+        "ARI": null,
+        "NMI": null,
+        "silhouette_unnorm": 0.0118,
+        "silhouette_sym": -0.3694,
+        "silhouette_shortest_path": -0.1107,
+        "davies_bouldin_unnorm": 0.7813,
+        "davies_bouldin_sym": 3.3947,
+        "davies_bouldin_shortest_path": 1.0304,
+        "modularity": 0.0096
+      },
+      "clusterSizes": [
+        3963,
+        25,
+        17,
+        11,
+        10,
+        8,
+        5
+      ],
+      "flag": "near-degenerate \u2014 local-scale micro-clusters split tight friend-groups off a single giant community"
+    }
+  ]
+}
