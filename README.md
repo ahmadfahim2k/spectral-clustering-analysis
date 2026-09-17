@@ -69,8 +69,7 @@ README.md           This file
 
 ## Visualisation Tool
 
-The `visualiser/` directory contains a Next.js application (React + Tailwind CSS
-+ D3.js) that reads pre-computed JSON and presents it interactively.
+The `visualiser/` directory contains a Next.js application (React + Tailwind CSS + D3.js) that reads pre-computed JSON and presents it interactively.
 
 1. Install dependencies:
    ```
