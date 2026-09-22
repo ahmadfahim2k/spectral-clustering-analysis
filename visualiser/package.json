@@ -9,6 +9,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=18.17"
+  },
   "dependencies": {
     "d3": "^7.9.0",
     "next": "^14.2.5",
