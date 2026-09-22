@@ -3,6 +3,10 @@
 This archive contains the source code used to produce the results and
 analysis presented in the accompanying dissertation.
 
+**Live demo:** the visualisation tool is deployed at
+https://spectral-clustering-analysis.vercel.app/ — no setup required to explore
+the results in a browser. To run it locally, see "Visualisation Tool" below.
+
 ## Project Structure
 
 ```
@@ -70,6 +74,9 @@ README.md           This file
 ## Visualisation Tool
 
 The `visualiser/` directory contains a Next.js application (React + Tailwind CSS + D3.js) that reads pre-computed JSON and presents it interactively.
+
+A hosted version is live at https://spectral-clustering-analysis.vercel.app/. To
+run it locally instead:
 
 1. Install dependencies:
    ```
